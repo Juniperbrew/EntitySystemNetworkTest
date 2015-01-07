@@ -22,7 +22,7 @@ public class AIRandomMovementSystem extends EntityProcessingSystem{
 
     @Override
     protected void process(Entity e) {
-        System.out.println("Moving randomly");
+        //System.out.println("Moving randomly");
         Position position = pm.get(e);
 
         position.x += ((rng.nextFloat()*5)-2.5f)*world.delta;

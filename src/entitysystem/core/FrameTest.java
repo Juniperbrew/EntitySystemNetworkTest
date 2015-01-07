@@ -1,6 +1,7 @@
 package entitysystem.core;
 
 import com.artemis.*;
+import entitysystem.systems.AIRandomMovementSystem;
 import entitysystem.util.EntityToString;
 
 import java.util.Vector;
@@ -16,8 +17,8 @@ public class FrameTest extends TestAbstract<String>{
 
 	@Override
 	void initialize(){
-		worldData = new WorldData("untitled.tmx");
-		world = worldData.getWorld();
+		worldData = WorldLoader.loadWorld("untitled.tmx");
+		world = worldData.world;
 	}
 
 	@Override
